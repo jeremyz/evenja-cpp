@@ -1,0 +1,47 @@
+HISTORY
+-------
+
+Evenja 3.3.0 (04.06.2012)
+- To correspond to action followDestination 
+  - Rename destination1Data to oneDataDestination
+  - Rename destination2Data to leadDestination
+- 'make install' OK, all needed files in a subdirectory 'deploy'
+- Update README with 'deploy' directory explanation
+- First push of code on github ;)
+
+----------------------------------------------------------------
+
+Evenja 3.2.0
+- Complete all text to generate a good oxygen documentation, available at http://www.revena.com/evenja/evenja-documentation
+- Add Xcode.xcodeproj, to compile with Xcode
+
+Evenja 3.1.5
+- New main.cpp by Bastos (Bastien Andrès)
+- Update configure.in
+
+Evenja 3.1.4
+- New version of configure.in by Jeremy Zurcher
+- Add jeremy.zurcher@heraeus.com in the AUTHORS
+- evenjastrings.h, remove warning message making better "typing"
+
+Evenja 3.1.3
+- Real AUTHORS, INSTALL and ChangeLog
+- fport.cpp::setFreeEvenData : setFreeEvenData also all evenDataB added in the evenData.
+- Add resetEvenDataB in the reset method.
+- Rename evenja::FevenData::getEvenDataB with evenja::FevenData::removeEvenDataB.
+- Add methods
+  - evenja::FevenData::getEvenDataB( int idx)
+  - evenja::FevenData::getCountEvenDataB()
+
+Evenja 3.1.2
+- Correct a bug in : FevenData::getSplitted 
+
+Evenja 3.1.1
+- Update Licence and header file (.h & .cpp)
+
+Evenja 3.1
+- Some bug fixed from evenja 3.0
+- New release (Beta)
+
+Evenja 3.0
+- Same version as the one delivereed in 2004

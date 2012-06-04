@@ -1,0 +1,49 @@
+#                         -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+
+# Define defaults evenja informations
+AC_INIT([evenja], [3.3], [fjp@evenja.org], [Evenja-Quantum Programming], [http://www.evenja.org])
+AC_PREREQ([2.68])
+AM_INIT_AUTOMAKE
+
+# Default automake needs
+AC_CONFIG_SRCDIR([src/main.cpp])
+AC_CONFIG_HEADER([config.h])
+
+# Release informatons
+AC_DEFINE([LIB_MAJOR],3,[major version number])
+AC_DEFINE([LIB_MINOR],3,[minor version number])
+AC_DEFINE([LIB_MICRO],0,[micro version number])
+
+# Default Deploy directory
+AC_PREFIX_DEFAULT([deploy])
+
+# Checks for programs.
+AC_PROG_CXX
+AC_PROG_CC
+AC_PROG_INSTALL
+
+# Checks for libraries.
+AC_CHECK_LIB( [xml2], [xmlParseFile], ,AC_MSG_ERROR([evenja requires libxml2]) )
+AC_SUBST(EV_XMLLIB, `xml2-config --libs`)
+AC_SUBST(EV_XMLINC, `xml2-config --cflags`)
+CPPFLAGS="${CPPFLAGS} ${EV_XMLINC}"
+LIBS="${LIBS} ${EV_XMLLIB}"
+
+# Checks for header files.
+AC_HEADER_STDC
+AC_CHECK_HEADERS([stdint.h stdlib.h string.h stdio.h], ,AC_MSG_ERROR([*** required header missing ***]))
+
+# Checks for typedefs, structures, and compiler characteristics.
+AC_HEADER_STDBOOL
+AC_C_CONST
+AC_TYPE_UINT32_T
+
+# Checks for library functions.
+AC_FUNC_MALLOC
+AC_FUNC_STRTOD
+AC_CHECK_FUNCS([memmove memset sqrt strcasecmp strchr strstr])
+
+AC_CONFIG_FILES([Makefile src/Makefile])
+AC_OUTPUT
+

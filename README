@@ -1,5 +1,20 @@
-cpp
-===
+Evenja cpp
+==========
 
 Release CPP of Evenja - Quantum Programming Paradigm
+
+First read the famous 'INSTALL' file
+
+or directly as usual :
+
+  ./configure
+  make
+  make install
+
+To run :
+
+  cd deploy
+  bin/evenja configs/ezlog.xml 
+
+The 'ezlog.xml' is an empty XML... no application.
 
