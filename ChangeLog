@@ -21,7 +21,7 @@ Evenja 3.1.5
 
 Evenja 3.1.4
 - New version of configure.in by Jeremy Zurcher
-- Add jeremy.zurcher@heraeus.com in the AUTHORS
+- Add jeremy@asynk.ch in the AUTHORS
 - evenjastrings.h, remove warning message making better "typing"
 
 Evenja 3.1.3

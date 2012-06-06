@@ -2,3 +2,4 @@ configure.in
 deploy/
 .DS_Store
 *~
+*.o
