@@ -1,0 +1,17 @@
+#! /bin/bash
+echo 
+echo Build the configure and files with autoconf, automake, aclocal, autoheader
+echo --------------------------------------------------------------------------
+export PATH="$HOME/local/bin:$PATH"
+echo autoheader
+autoheader
+echo aclocal
+aclocal
+echo autoconf
+autoconf
+echo automake
+automake --add-missing
+
+# Remove not needed file for the git push
+./del4push
+

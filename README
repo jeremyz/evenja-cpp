@@ -4,17 +4,21 @@ Evenja cpp <http://www.evenja.org>
 Release CPP of Evenja - Quantum Programming Paradigm
 
 All classes on-line documentation <http://www.evenja.org/doc>
+Follow use on twitter @evenjalib
 
 First read the famous 'INSTALL' file
-
 or directly as usual :
 
   ./configure
   make
   make install
 
-To run :
+If you have some errors, use the tools
+	delall		 Delete all files build buy autoconf, automake, configure, make, etc.. processes
+	del4push	 Delete all files not needed in the git push
+	makeconf	 Build the configure and files with autoconf, automake, aclocal, autoheader
 
+To run :
   cd deploy
   bin/evenja configs/ezlog.xml 
 

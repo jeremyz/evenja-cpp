@@ -1,0 +1,18 @@
+#!/bin/bash
+echo 
+echo Delete all files build buy autoconf, automake, configure, make, etc.. processes
+echo -------------------------------------------------------------------------------
+
+# first call del4push, to delete all files not needed for the push
+./del4push
+
+# second delete the rest of generated files
+rm Makefile
+rm Makefile.in
+rm aclocal.m4
+rm src/Makefile
+rm src/Makefile.in
+rm config.h
+rm config.h.in
+rm configure
+

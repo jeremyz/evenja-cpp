@@ -1,5 +1,6 @@
-configure.in
+.deps
 deploy/
 .DS_Store
 *~
 *.o
+
