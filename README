@@ -14,9 +14,9 @@ or directly as usual :
   make install
 
 If you have some errors, use the tools
-	delall		 Delete all files build buy autoconf, automake, configure, make, etc.. processes
-	del4push	 Delete all files not needed in the git push
-	makeconf	 Build the configure and files with autoconf, automake, aclocal, autoheader
+  delall     Delete all files build buy autoconf, automake, configure, make... processes
+  del4push   Delete all files not needed in the git push
+  makeconf   Build the configure and files with autoconf, automake, aclocal, autoheader
 
 To run :
   cd deploy
