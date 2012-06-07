@@ -13,5 +13,5 @@ execbindir = ../$(prefix)/bin
 execbin_PROGRAMS = evenja
 
 configsdir = ../$(prefix)/configs
-configs_DATA = configs/ezlog.xml
+configs_DATA = config/ezlog.xml
 
