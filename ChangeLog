@@ -1,6 +1,12 @@
 HISTORY
 -------
 
+Evenja 3.3.1 (07.06.12)
+- Make install. All files in a deploy subdirectory
+- configure.in and is tools (easy manage of automake, ...) 
+
+----------------------------------------------------------------
+
 Evenja 3.3.0 (04.06.2012)
 - To correspond to action followDestination 
   - Rename destination1Data to oneDataDestination
@@ -8,8 +14,6 @@ Evenja 3.3.0 (04.06.2012)
 - 'make install' OK, all needed files in a subdirectory 'deploy'
 - Update README with 'deploy' directory explanation
 - First push of code on github ;)
-
-----------------------------------------------------------------
 
 Evenja 3.2.0
 - Complete all text to generate a good oxygen documentation, available at http://www.revena.com/evenja/evenja-documentation
@@ -45,3 +49,10 @@ Evenja 3.1
 
 Evenja 3.0
 - Same version as the one delivereed in 2004
+
+Evenja 2.0
+- Never deployed 2000
+
+Evenja 1.0
+- SCALP languagei and compiler 1992
+

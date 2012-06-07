@@ -2,12 +2,12 @@
                              main.cpp
                              --------
     begin                : mar oct  1 14:35:53 CEST 2002
-    copyright            : (C) 1992-2008 by Fabian José Padilla
+    copyright            : (C) 1992-2012 by Fabian José Padilla
     email                : fjp@evenja.org
  ***************************************************************************/
 
 /******************************************************************************
- *   Copyright (C) 2012 Fabian José Padilla                                   *
+ *   Copyright (C) 1992-2012 Fabian José Padilla                                   *
  *                                                                            *
  *  This program is free software: you can redistribute it and/or modify      *
  *  it under the terms of the GNU Affero General Public License as            *

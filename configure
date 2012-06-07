@@ -2807,7 +2807,7 @@ $as_echo "#define LIB_MAJOR 3" >>confdefs.h
 $as_echo "#define LIB_MINOR 3" >>confdefs.h
 
 
-$as_echo "#define LIB_MICRO 0" >>confdefs.h
+$as_echo "#define LIB_MICRO 1" >>confdefs.h
 
 
 # Default Deploy directory

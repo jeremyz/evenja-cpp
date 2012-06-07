@@ -7,7 +7,7 @@
  ***************************************************************************/
 
 /******************************************************************************
- *   Copyright (C) 2012 Fabian José Padilla                                   *
+ *   Copyright (C) 1992-2012 Fabian José Padilla                                   *
  *                                                                            *
  *  This program is free software: you can redistribute it and/or modify      *
  *  it under the terms of the GNU Affero General Public License as            *

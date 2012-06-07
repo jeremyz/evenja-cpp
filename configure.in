@@ -13,7 +13,7 @@ AC_CONFIG_HEADER([config.h])
 # Release informatons
 AC_DEFINE([LIB_MAJOR],3,[major version number])
 AC_DEFINE([LIB_MINOR],3,[minor version number])
-AC_DEFINE([LIB_MICRO],0,[micro version number])
+AC_DEFINE([LIB_MICRO],1,[micro version number])
 
 # Default Deploy directory
 AC_PREFIX_DEFAULT([deploy])
