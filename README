@@ -20,7 +20,7 @@ If you have some errors, use the tools
 
 To run :
   cd deploy
-  bin/evenja configs/ezlog.xml 
+  bin/evenja config/ezlog.xml
 
 The 'ezlog.xml' is an empty XML... no application.
 

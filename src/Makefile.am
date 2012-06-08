@@ -3,7 +3,7 @@ bin_PROGRAMS = evenja
 
 # evenja objects
 
-evenja_SOURCES = globalvars.cpp fclassinfos.cpp fviewer.cpp fstringhash.cpp fstarter.cpp frouter.cpp fposition.cpp fportlisthash.cpp fport.cpp flisthash.cpp flist.cpp flisttree.cpp fevenprg.cpp fconditionlink.cpp fevendoor.cpp fevendata.cpp fevenboard.cpp fconfig.cpp fportbkpevendata.cpp main.cpp 
+evenja_SOURCES = globalvars.cpp fclassinfos.cpp fviewer.cpp fstringhash.cpp fstarter.cpp frouter.cpp fposition.cpp fportlisthash.cpp fport.cpp flisthash.cpp flist.cpp flisttree.cpp fevenprg.cpp fconditionlink.cpp fevendoor.cpp fevendata.cpp fevenboard.cpp fconfig.cpp fportbkpevendata.cpp main.cpp
 
 evenja_LDADD = -lxml2
 
