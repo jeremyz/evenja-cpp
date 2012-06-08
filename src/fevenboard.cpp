@@ -1,5 +1,5 @@
 /***************************************************************************
-                             fevenboard.cpp 
+                             fevenboard.cpp
                              --------------
     begin                : sam nov 2 2002
     copyright            : (C) 1992-2008 by Fabian José Padilla
@@ -39,7 +39,7 @@ FevenBoard::~FevenBoard() {}
 long FevenBoard::receive_evenData( FevenData* evenData)
 {
   FstringHash* action = evenData->getCurrentDestination()->getAction();
-  
+
   // A single action here (this is a bug), then goto next destination or error
   if( action->equals( &gvActionOneDataDestination))
   {

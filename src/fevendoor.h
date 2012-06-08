@@ -37,7 +37,7 @@ namespace evenja {
 
   description : evenDoor would convert a specific data format to the internal
                 evenData format and the evenData format to the external data format.
-  
+
   @author Fabian Padilla
 */
 
@@ -61,7 +61,7 @@ public:
 
   /** Methods to sends evenDatas to a port */
   void sendEvenData( FevenData* evenData);
-  
+
 // -----------------------------------------------------
 // Virtuals
 // -----------------------------------------------------

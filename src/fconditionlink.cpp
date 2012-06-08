@@ -30,7 +30,7 @@ namespace evenja {
 /** Constructor withour parameters. */
 FconditionLink::FconditionLink() {}
 	
-/** 
+/**
  \param[in] linkSource Where the specialLink will apply.
  \param[in] linkTypeFieldsNames List of fields to generate a temporary value that need to be equal to [value] to apply the conditionLink.
  \param[in]	linkValue Value to compare with concatened [typeFields]'s values, to apply or not a conditionLink.

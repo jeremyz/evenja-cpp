@@ -34,24 +34,24 @@ namespace evenja {
   //xx
   Function : Create the first level of classes Fport (Frouter,...)
   and receive informations from the OS.
-   
+
   Description : root room of the evenja application.
   Connection with the OS for messaging or other incoming OS informations.
   This class implmentation is OS dependant.
-   
+
   @author Fabian Padilla
 */
 
 class Fevenja
 {
-    
+
 public:
 	/** Constructor. */
   Fevenja();
-  
+
 
 };
-  
+
 }   // namespace evenja
 
 #endif

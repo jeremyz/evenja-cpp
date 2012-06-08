@@ -27,7 +27,7 @@
 #include <sys/ipc.h>
 #include <sys/msg.h>
 #include <string.h>
- 
+
 #include "fstarter.h"
 #include "returncodes.h"
 #include "evenjastrings.h"
@@ -81,10 +81,10 @@ long Fstarter::execute()
       {
         data = ( FevenData*) listMsg.removeFifo();
         ( ( Fport*) data->getActivePort())->justDoIt( data);
-      }        
+      }
     }
   }while( server && !exitApp);
-  
+
   return RET_OK;
 }
 

@@ -49,8 +49,8 @@ namespace evenja {
   - Methods Find and FindNext enable to search by name an tree Node.
 
   Fconfig is a generic caller for a tree access. This enable to change the type of supported tree XML,
-    LDAP or others, without having to update the evenja kernel.  
-  
+    LDAP or others, without having to update the evenja kernel.
+
   @author Fabian Padilla
 */
 
@@ -118,7 +118,7 @@ public:
   void* getCurrent();
 
 // -----------------------------------------------------
-// Methods to move current node pointer to an another node 
+// Methods to move current node pointer to an another node
 // -----------------------------------------------------
 
   /** Reset the current pointer to the root of document (with fromRoot = true) or the first node defined with start(). */

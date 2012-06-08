@@ -42,9 +42,9 @@ namespace evenja {
 extern FstringHash EVENDATA_BASE;
 
 /** Kernel of the evenja and evendoor technology => the DATA.
-  Data is the only that know where they want to go. They can go to all 
+  Data is the only that know where they want to go. They can go to all
   FPort inherited classes , like FevenDoor, FevenBoard, etc...
-  THIS TECHNOLOGY AND SCENARIO OF USE IS COVERED BY THE 
+  THIS TECHNOLOGY AND SCENARIO OF USE IS COVERED BY THE
   AGPL Affero General Public License.
   COPYRIGHT 1992-2004 Fabian Padilla.
 
@@ -125,7 +125,7 @@ protected: // Protected attributes
   /** Update the hashValue of the FevenData, if fieldName exist in the linkFieldsName or is NULL. */
   void updateHashValue( char* fieldName = NULL);
 
-public: 
+public:
 
   /** Constructor */
   FevenData();

@@ -47,7 +47,7 @@ namespace evenja {
 
 */
 
-class Flist 
+class Flist
 {
 
 protected : // Protected attributes
@@ -59,10 +59,10 @@ protected : // Protected attributes
   void** lastElement;
 
   /** Maximum mumber of elements available in the current list. */
-  long nbElements;                  
+  long nbElements;
 
   /** First element that can be used to add a new value. */
-  void** firstElementFree;        
+  void** firstElementFree;
 
   // Protected methods
 
@@ -77,7 +77,7 @@ protected : // Protected attributes
 
 public:
 
-  /** Constructor, init buffer list. */ 
+  /** Constructor, init buffer list. */
   Flist();
 
   /** Destructor, delete the buffer, but not the content pointed by. */
@@ -85,13 +85,13 @@ public:
 	
   /** Reset, clean all the list by resetting internal pointers. */
   void reset();
-  
+
   /** Add an element in the list, at the end of it. */
   long add( void* ptr);
-  
+
   /** Insert an element in the list, at a specific place. */
   long insert( long idx, void* ptr);
-  
+
   /** Get from the list. With idx. */
   void* get( long idx);
 
@@ -100,13 +100,13 @@ public:
 
   /** Remove from the list. First In First Out. */
   void* removeFifo();
-  
+
   /** Remove from the list. First In Last Out as a Stack. */
   void* removeStack();
-  
+
   /** Get count (number of elements in the listi). */
   long getCount();
-  
+
 };
 
 } // namespace

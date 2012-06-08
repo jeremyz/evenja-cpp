@@ -32,13 +32,13 @@ namespace evenja {
 
 #define STRING_MODULO 64
 
-/** To speed up the process of comparaison between values, basically between evenData and FPort 
+/** To speed up the process of comparaison between values, basically between evenData and FPort
     evenja use a hash technology.
 
   function : hash a string and show hashvalue and string.
-  
-  description : the method "setString" is used to set the the value of the stringhash. 
-  		Then  the hash value is available. 
+
+  description : the method "setString" is used to set the the value of the stringhash.
+  		Then  the hash value is available.
 		This will speedup the comparaison between the different "string" in evenja rooms.
 		( it is faster to compare four int than a complete string).
 
@@ -68,8 +68,8 @@ protected : // Protected attributes
 
   /** In this implementation we use the MD5 hashing technology */
   void md5( unsigned int* state, unsigned char* str, unsigned int length);
-  
-public: 
+
+public:
 
   /** Constructor, without parameters (for inheritance capabilities). */
   FstringHash();
@@ -91,7 +91,7 @@ public:
 	
   /** Get len of the string. */
   long getLen();
-  
+
   /** Enable to read the HashValue. To speed up the comparaison process. */
   unsigned* getHashValue();
 

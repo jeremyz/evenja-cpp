@@ -83,7 +83,7 @@
 #define ACT_SYS_ADDDEST     (char*)"SYS_ADDDEST"   /** Add a spceial destinatio to an evenDoor */
 #define ACT_SYS_REMOVEDEST  (char*)"SYS_REMOVEDEST"/** Remove a special destination to an evenDoor */
 #define ACT_SYS_TESTMODE    (char*)"SYS_TESTMODE"  /** Enable the check of a port with the configuration of them, at runtime */
-                       
+
 // -------------------------------------------------------------------------
 /** SOFTWARE ACTIONS.
     Standard actions implemented in the evenja kernel.

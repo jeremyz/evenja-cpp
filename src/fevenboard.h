@@ -43,7 +43,7 @@ namespace evenja {
 
 class FevenBoard : public FportListHash
 {
-public: 
+public:
 	/** Constructor. */
   FevenBoard();
 	

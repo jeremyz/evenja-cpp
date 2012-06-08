@@ -42,8 +42,8 @@ namespace evenja {
   @author Fabian Padilla.
   I don't use templates with iterators, because many people don't know enough about templates.
   And this code need to be easily read by anyone. Another version will be optimized with new C++ 1x, in 2012 (may be ;).
-    
-*/  
+
+*/
 
 class FlistHash : public FlistTree
 {
@@ -56,13 +56,13 @@ protected: // Protected methods
   /** Search the position of the same hashvalue. Return the position (pointer of the pointer) of FstringHash found in the list or if not found, NULL. */
   FstringHash** SearchPos( evenja::FstringHash* ptr);
 
-public: 
+public:
 	FlistHash();
 	~FlistHash();
 
   /** Search if same name (stringhash) exist*/
-  FstringHash* Search( evenja::FstringHash* ptr);  
-  
+  FstringHash* Search( evenja::FstringHash* ptr);
+
   /** If the same name exist in the list then get the previus from the list.
   If the same name not exist, then add and return NULL. */
   FstringHash* addOrGet( evenja::FstringHash* ptr);
@@ -70,7 +70,7 @@ public:
   /** If the same name exist in the list, then remove the stringHash from the list and return the pointer.
   if the same name not exist in the list, then add to the list. */
   FstringHash* addOrRemove( evenja::FstringHash* ptr);
-  
+
 };
 
 } // namespace

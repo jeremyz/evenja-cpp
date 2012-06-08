@@ -41,7 +41,7 @@
 /** Method not already implmented. */
 #define RET_NOTIMPLEMENTED  -1001
 /** Text version. */
-#define RET_NOTIMPLEMENTED_TXT  "NOT IMPLEMENTED" 
+#define RET_NOTIMPLEMENTED_TXT  "NOT IMPLEMENTED"
 
 // Erros which can be generated at start of the application (before the rooms are working)
 /** The parameter is not available. */

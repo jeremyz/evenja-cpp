@@ -40,7 +40,7 @@ void FevenPrg::sendEvenData( FevenData* evenData)
 {
   if( evenDataB == evenData)  // If send then, NO PROBLEMO
     evenDataB = 0;
-    
+
   FportBkpEvenData::sendEvenData( evenData);
 }
 
@@ -65,7 +65,7 @@ long FevenPrg::justDoIt( FevenData* evenData)
 		
 	long ret =  FportBkpEvenData::justDoIt( evenData);
 		
-	// XXXXXXXXXXXXXXXX 
+	// XXXXXXXXXXXXXXXX
 	/*  if( evenDataB) // The evenPrg have forget to send a data ???
 	 { // Yes, then evenja send it to error
 	 evenDataB->definePortAction( ACT_ERROR);

@@ -54,11 +54,11 @@ protected: // Protected attributes
 
   /** Get the informations concerning the cration of a port (room, evenprg, etc...) */
   long getLinkInfos( FconditionLink* conditionLink);
-  
+
   /** Create a room with a structure defined by the config or node in start method */
   long createRoom();
 
-public: 
+public:
 	
 	/** Constructor. */
 	Frouter();
@@ -75,7 +75,7 @@ public:
 	
 	/** Start configuration of an instance with a node in an XML tree, and sets the parent router. */
   virtual long start( Fport* parentPort, void* node);
-    
+
   /** Receive the evenData to be routed to the right router or port. */
   virtual long receive_evenData( FevenData* evenData);
 

@@ -27,7 +27,7 @@
 #include <time.h>
 #include <stdlib.h>
 
-#include "returncodes.h"  
+#include "returncodes.h"
 #include "fevendata.h"
 
 namespace evenja {
@@ -81,7 +81,7 @@ char* FevenData::getSplitted( char separator, char* string)
     if( strlen( string) < MAX_STRING)
        strcpy( splitBuffer, string);
     else
-      return (char*) RET_STRING2LONG; 
+      return (char*) RET_STRING2LONG;
 
     ptrWorkStart  = splitBuffer;
   }
@@ -279,7 +279,7 @@ long FevenData::setDatasFromXml( xmlDocPtr newDoc)
     return RET_CANNOTACCESS;
 }
 
-/** \param[in] fieldName If exist in the linkFieldsName or is NULL, FevenData's hashValue will be updated.  
+/** \param[in] fieldName If exist in the linkFieldsName or is NULL, FevenData's hashValue will be updated.
   \return No return value. */
 void FevenData::updateHashValue( char* fieldName)
 {
@@ -523,7 +523,7 @@ void FevenData::addEvenDataB( FevenData* evenData)
 }
 
 /** \ param[in] idx Index of the FevenDataB to return.
-  \retval RET_NOTEXIST Pointer to the RET_NOTEXIST value. 
+  \retval RET_NOTEXIST Pointer to the RET_NOTEXIST value.
   \retval other_pointer_value The asked evenDataB pointer. */
 FevenData* FevenData::getEvenDataB( long idx)
 {
@@ -531,7 +531,7 @@ FevenData* FevenData::getEvenDataB( long idx)
 }
 
 /** \param[in] idx Index of the FevenDataB to remove and return.
-  \retval RET_NOTEXIST Pointer to the RET_NOTEXIST value. 
+  \retval RET_NOTEXIST Pointer to the RET_NOTEXIST value.
   \retval other_pointer_value The asked evenDataB pointer. */
 FevenData* FevenData::removeEvenDataB( long idx)
 {
@@ -676,7 +676,7 @@ char* FevenData::getDatasToString()
   return (char*) xmlBuffer;
 }
 
-/** \param[in] fileNameString Export XML tree to this fileNameString. 
+/** \param[in] fileNameString Export XML tree to this fileNameString.
    \retval RET_OK No problemo, XML tree saved to a file.
    \retval RET_FILENAME2LONG FileName is too long > MAX_PATH.
    \retval RET_CANNOTSAVE Cannot save to the XML file.*/
@@ -751,7 +751,7 @@ void FevenData::reset()
 
 // erase all datas
   endXml();
-  initDatas();          
+  initDatas();
 }
 
 /** \retval evenData* new instance of this type of FevenData. */

@@ -38,9 +38,9 @@
 #define MAX_TREELEVEL         8
 
 /* Flist management. Start with a list of 100 elements */
-#define START_ELEMENTS          100 
+#define START_ELEMENTS          100
 /* Flist management. If list is full increment the size of 50 elemnts */
-#define INC_ELEMENTS            50    
+#define INC_ELEMENTS            50
 
 #endif
 

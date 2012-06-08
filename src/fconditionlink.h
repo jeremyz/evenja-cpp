@@ -31,10 +31,10 @@
 namespace evenja {
 
 /** function : Contain stringhash informations to define conditional links between a source and a destination.
- 
+
    description : If concatenation of [typeFields]'s values are equal to [value],
    		then the [destination] will apply with the evenData's linkValue defined by [fields].
- 
+
    @author Fabian Padilla
 */
 
@@ -61,7 +61,7 @@ public: // Variable are all public.
 
   /** EvenData's fields to generate the linkValue for the rest of the room (if conditionLink apply). */
   FstringHash fields;
-  
+
   /** EvenData's destination, when conditionLink apply. */
   FstringHash destination;
 

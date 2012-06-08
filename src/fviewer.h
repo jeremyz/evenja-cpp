@@ -42,9 +42,9 @@ namespace evenja {
                 access the head information :
                 - source
                 - destination
-                and access the data information.  
+                and access the data information.
                 WITHOUT HAVING TO DO A VERSIONNING.
-  
+
   @author Fabian Padilla
 */
 
@@ -52,14 +52,14 @@ class Fviewer : public Fport
 {
 
 protected : // Protected attributes
-    
+
 public:
 	
 	/** Constructor. */
 	Fviewer();
 	
 	/** Destructor. */
-	~Fviewer();  
+	~Fviewer();
 };
 
 }   // namespace evenja

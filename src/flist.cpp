@@ -25,7 +25,7 @@
 
 #include <string.h>
 #include <stdlib.h>
- 
+
 #include "flist.h"
 #include "returncodes.h"
 
@@ -77,7 +77,7 @@ void Flist::reset()
 {
   firstElementFree = firstElement;
 }
-  
+
 /** \param[in] ptr Add an object pointer at the end of the list.
   \retval RET_OK No problemo.
   \retval RET_MEMORYSPACE No more memory space. */
@@ -104,7 +104,7 @@ long Flist::add( void* ptr)
 long Flist::insert( long idx, void* ptr)
 {
   long ret = RET_OK;
-  
+
   void** elementIdx = ( ( void**) firstElement) + idx;
 
   if( firstElementFree >= lastElement) // Is the table full ?
@@ -116,14 +116,14 @@ long Flist::insert( long idx, void* ptr)
     memmove( ( elementIdx + 1), elementIdx, ( ( firstElementFree - elementIdx) * sizeof( void*)));
 
     *elementIdx = ptr;
-    firstElementFree++;    
+    firstElementFree++;
   }
 
-  return ret;  
+  return ret;
 }
 
 /** \param[in] idx Position index to read the object pointer.
-  \retval RET_NOTEXIST Pointer to the RET_NOTEXIST value. 
+  \retval RET_NOTEXIST Pointer to the RET_NOTEXIST value.
   \retval other_pointer_value : The asked pointer. */
 void* Flist::get( long idx)
 {
@@ -133,18 +133,18 @@ void* Flist::get( long idx)
 }
 
 /** \param[in] pos Pointer to the pointer of the object to read.
-  \retval RET_NOTEXIST Pointer to the RET_NOTEXIST value. 
+  \retval RET_NOTEXIST Pointer to the RET_NOTEXIST value.
   \retval other_pointer_value The asked pointer. */
 void* Flist::get( void** pos)
 {
-  if( pos >= firstElement && pos < firstElementFree) // is it in the list space ? 
+  if( pos >= firstElement && pos < firstElementFree) // is it in the list space ?
     return *pos;
   else
     return ( char*) RET_NOTEXIST;
 }
 
 /** \param[in] idx Position index of the object to remove from the list. Replace the previous pointer in the list with NULL.
-  \retval RET_NOTEXIST Pointer to the RET_NOTEXIST value. 
+  \retval RET_NOTEXIST Pointer to the RET_NOTEXIST value.
   \retval other_pointer_value The asked pointer. */
 void* Flist::remove( long idx)
 {
@@ -154,7 +154,7 @@ void* Flist::remove( long idx)
 }
 
 /** \param[in] pos Position of the pointer of the object to remove from the list. Replace the previous pointer in the list with NULL.
-  \retval RET_NOTEXIST Pointer to the RET_NOTEXIST value. 
+  \retval RET_NOTEXIST Pointer to the RET_NOTEXIST value.
   \retval other_pointer_value The asked pointer. */
 void* Flist::remove( void** pos)
 {
@@ -172,10 +172,10 @@ void* Flist::remove( void** pos)
     return ptr;
   }
   else
-    return ( char*) RET_NOTEXIST;    
+    return ( char*) RET_NOTEXIST;
 }
 
-/** \retval RET_NOTEXIST Pointer to the RET_NOTEXIST value. 
+/** \retval RET_NOTEXIST Pointer to the RET_NOTEXIST value.
   \retval other_pointer_value The asked pointer. */
 void* Flist::removeFifo()
 {
@@ -185,7 +185,7 @@ void* Flist::removeFifo()
   {
     ptr = *firstElement;                // get the first
 
-    // move all the list 
+    // move all the list
     memmove( firstElement, ( firstElement + 1), ( ( ( firstElementFree - firstElement) - 1) * sizeof( void*)));
 
     *firstElementFree-- = NULL;            // clean the last
@@ -196,7 +196,7 @@ void* Flist::removeFifo()
     return ( char*) RET_NOTEXIST;
 }
 
-/** \retval RET_NOTEXIST Pointer to the RET_NOTEXIST value. 
+/** \retval RET_NOTEXIST Pointer to the RET_NOTEXIST value.
   \retval other_pointer_value The asked pointer. */
 void* Flist::removeStack()
 {

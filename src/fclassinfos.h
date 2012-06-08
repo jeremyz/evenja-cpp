@@ -58,7 +58,7 @@ struct FclassInfos
 	FclassInfos( char* classType, char* classConf, char* classLib, char* classDebug);
 	
 	/** Destructor. */
-	~FclassInfos(); 
+	~FclassInfos();
 
 };
 

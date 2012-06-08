@@ -57,7 +57,7 @@ void FevenDoor::sendEvenData( FevenData* evenData)
 
     // If nothing in the string then OK to send all evenData to the dest
     allEvenData = !(*spDest->typeFields.getString());
-    
+
     // Set the fields to check value correctly
     if( !allEvenData)
       evenData->setLinkFieldsNames( ( char*) spDest->typeFields.getString());
@@ -68,10 +68,10 @@ void FevenDoor::sendEvenData( FevenData* evenData)
       {
         FevenData* evenDataToDo = getFreeEvenData();
         evenDataToDo->copyFrom( evenData);
-      
+
         evenDataToDo->setSource( ( char*) getString());
         evenDataToDo->setLinkFieldsNames( ( char*) spDestToDo->fields.getString());
-    
+
         evenDataToDo->resetDestinations();
         evenDataToDo->addDestination(  ( char*) spDestToDo->destination.getString());
 
@@ -79,7 +79,7 @@ void FevenDoor::sendEvenData( FevenData* evenData)
       }
 
       spDestToDo = spDest;
-    }    
+    }
   }
 
   if( spDestToDo)  // Something to send
@@ -94,7 +94,7 @@ void FevenDoor::sendEvenData( FevenData* evenData)
    }
    else // Otherwise it means that the data go back to available datas
      parent->setFreeEvenData( evenData);
-   
+
 }
 
 /** \param[in] evenData FevenData to be just worked in system jobs.

@@ -26,11 +26,11 @@
 
 #include "evenjastrings.h"
 #include "fstringhash.h"
- 
+
 
 namespace evenja {
 
-// ACTIONS  
+// ACTIONS
 FstringHash gvActionNormal;
 FstringHash gvActionOneDataDestination;
 FstringHash gvActionLeadDestination;

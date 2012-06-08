@@ -43,7 +43,7 @@ int main(int argc, char * const argv[])
   }
 
   evenja::initGlobalVars();
-  
+
   evenja::Fstarter* starter = new evenja::Fstarter();
   if(! starter)                  // if created then work, otherwise error
   {
@@ -66,7 +66,7 @@ int main(int argc, char * const argv[])
   ret = starter->end();       // Enabled if we are in a dynamic configuration
 	
   delete starter;
-  
+
   return RET_OK;
 }
 

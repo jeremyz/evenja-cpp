@@ -45,9 +45,9 @@ long FlistTree::searchTree( void* dataToAdd, long* posMin, long* posMax)
 {
   long size = ( *posMax - *posMin);
   long workIdx = *posMin + ( size >> 1);
-    
+
   long result = (*cmpFnct)( dataToAdd, get( workIdx), extra);
-    
+
   // If something then search recusively
   if( size > 1)
   {
@@ -113,5 +113,5 @@ long FlistTree::searchTree( void* dataToSearch)
 	else
 		return RET_NOTFOUND; // Error nothing to found
 }
-    
+
 }

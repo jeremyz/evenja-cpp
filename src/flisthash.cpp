@@ -28,7 +28,7 @@
 #include "flisthash.h"
 
 namespace evenja {
-    
+
 long orderStringHash( void* dataA, void* dataB, void* extra)
 {
     return ( ( FstringHash*) dataA)->compare( ( FstringHash*) dataB);

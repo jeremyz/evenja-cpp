@@ -37,7 +37,7 @@ namespace evenja {
   description : Must contain only the behavior to modify datas and "if"s concerning the
                 modification of datas. Do not implement in a evenPrg "if" about end user
                 functionnalities. See the withepaper.pdf at www.evenja.org.
-  
+
   @author Fabian Padilla
 */
 
@@ -46,7 +46,7 @@ class FevenPrg : public FportBkpEvenData
 private:
   /** Backup of the evenDatas that need to be sends by sendEvenData */
   FevenData* evenDataB;
-  
+
 public:
 	/*! Constructor. */
 	FevenPrg();

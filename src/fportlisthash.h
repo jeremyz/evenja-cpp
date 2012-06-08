@@ -37,13 +37,13 @@ namespace evenja {
              Inherited classes :
 							 FevenBoard : to merge and or maintain a list of evenDatas
                Frouter : to send the evenDatas to the right destinations.
- 
+
   description : Work as Fport. I know this class is "empty", but it is needed for the evendoor implementation.
- 
+
   @author Fabian Padilla
 */
 
-class FportListHash : public Fport 
+class FportListHash : public Fport
 {
 
 protected: // Protected attributes
@@ -51,7 +51,7 @@ protected: // Protected attributes
   /** List of inherited class from FstringHash ( found them faster). */
   FlistHash listHash;
 
-public: 
+public:
 	/** Constructor. */
 	FportListHash();
 	

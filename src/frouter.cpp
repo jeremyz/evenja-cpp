@@ -24,7 +24,7 @@
  ******************************************************************************/
 
 #include <string.h>
- 
+
 #include "frouter.h"
 #include "fevenboard.h"
 #include "fevendoor.h"
@@ -86,7 +86,7 @@ Frouter::~Frouter() {}
         popCurrent();                                             \
       }while( FindNext( AAA, false) == RET_OK);                   \
     }
-                                                                  
+
 /** \param[out] classInfo Return the configuration information of the class.
   \retval RET_OK No problemo.
   \retval RET_NOTEXIST No node with information found. */
@@ -101,7 +101,7 @@ long Frouter::getClassInfos( FclassInfos* classInfo)
 			classInfo->type.setString( getNodeContent());
 		else
 			classInfo->type.setString( ( char*)"");			
-    
+
     if( Find( XML_CONF) == RET_OK)
 			classInfo->conf.setString( getNodeContent());
 		else
@@ -109,7 +109,7 @@ long Frouter::getClassInfos( FclassInfos* classInfo)
 
     if( Find( XML_LIB) == RET_OK)
 			classInfo->lib.setString( getNodeContent());
-		else 
+		else
 			classInfo->lib.setString( ( char*)"");
 
     if( Find( XML_DEBUG) == RET_OK)
@@ -122,7 +122,7 @@ long Frouter::getClassInfos( FclassInfos* classInfo)
 
   popCurrent();
 
-  return ret;  
+  return ret;
 }
 
 /** \param[out] conditionLink Return the configuration information of the conditional link.
@@ -131,7 +131,7 @@ long Frouter::getClassInfos( FclassInfos* classInfo)
 long Frouter::getLinkInfos( FconditionLink* conditionLink)
 {
   long ret = RET_OK;
-  
+
   pushCurrent();
   if( gotoChildren() == RET_OK)
   {
@@ -139,7 +139,7 @@ long Frouter::getLinkInfos( FconditionLink* conditionLink)
 			conditionLink->source.setString( getNodeContent());
 		else
 			conditionLink->source.setString( ( char*)"");
-      
+
     if( Find( XML_LNKTYPE) == RET_OK)
 			conditionLink->typeFields.setString( getNodeContent());
 		else
@@ -158,13 +158,13 @@ long Frouter::getLinkInfos( FconditionLink* conditionLink)
     if( Find( XML_LNKDEST) == RET_OK)
 			conditionLink->destination.setString( getNodeContent());
 		else
-			conditionLink->destination.setString( ( char*)"");      
+			conditionLink->destination.setString( ( char*)"");
   }
   else
     ret = RET_NOTEXIST;
 
   popCurrent();
-  
+
   return ret;
 }
 
@@ -176,7 +176,7 @@ long Frouter::createRoom()
   FclassInfos classInfo;
   FconditionLink conditionLink;
   FstringHash strH;
-  
+
   Fport* port;
 
   resetCurrent();
@@ -196,7 +196,7 @@ long Frouter::createRoom()
 // --------------------------------------------------
 // IMPORT DATAS to enable an easy creation of evenData instances
 // --------------------------------------------------
-      
+
 // --------------------------------------------------
 // IMPORT YOUR OWN PORTS
 // --------------------------------------------------
@@ -208,8 +208,8 @@ long Frouter::createRoom()
 // --------------------------------------------------
 // IMPORT LINK VALUES BETWEEN evenData, evenDoor AND ports
 // --------------------------------------------------
-    if( !Find( XML_LNK, false))                                       
-    {                                                             
+    if( !Find( XML_LNK, false))
+    {
       do {
         pushCurrent();
         getLinkInfos( &conditionLink);
@@ -236,7 +236,7 @@ long Frouter::createRoom()
           }
         }
         popCurrent();
-      }while( FindNext( XML_LNK, false) == RET_OK);                   
+      }while( FindNext( XML_LNK, false) == RET_OK);
     }
     return RET_OK;
   }

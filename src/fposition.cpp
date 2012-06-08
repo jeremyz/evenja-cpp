@@ -49,12 +49,12 @@ void Fposition::resetPosition()
   if( positionActived)
   {
     computer.setString( TXT_NULL);
-  
+
     for( long i = 0; i < nbLevel; i++)
       delete ( FstringHash*) getRoom( i);
 
     nbLevel = 0;
-  
+
     port.setString( TXT_NULL);
     action.setString( TXT_NULL);
     unitWaitTime = ACT_WAIT_NOTHING;
@@ -64,8 +64,8 @@ void Fposition::resetPosition()
   }
 }
 
-/** \param[in] positionString Url like position, example : "www.revena.com/room1/door2:destination1Data". 
-  \retval RET_OK Position OK. 
+/** \param[in] positionString Url like position, example : "www.revena.com/room1/door2:destination1Data".
+  \retval RET_OK Position OK.
   \retval RET_STRING2LONG Position string to long. */
 long Fposition::setPosition( char* positionString)
 {
@@ -79,7 +79,7 @@ long Fposition::setPosition( char* positionString)
 
     nbLevel = 0;      // reset level counter
 
-    setString( positionString);    // set the hash for the full name position string 
+    setString( positionString);    // set the hash for the full name position string
 
     char* ptrWorkStart = bufferWork;
     char* ptrWorkEnd = strchr( ptrWorkStart, TREE_SEPARATOR);
@@ -115,7 +115,7 @@ long Fposition::setPosition( char* positionString)
 
         ptrWorkStart = ptrWorkEnd;
         ptrWorkStart++;
-        ptrWorkEnd = strchr( ptrWorkStart, '/');        
+        ptrWorkEnd = strchr( ptrWorkStart, '/');
       }
     }
 
@@ -211,7 +211,7 @@ long Fposition::getWaitTime()
 /** \return The unit time y,n,d,h,m,s or x */
 char Fposition::getUnitWaitTime()
 {
-  return unitWaitTime; 
+  return unitWaitTime;
 }
 
 /** \param[in] pos Original Fposition to copy all informations from.
@@ -230,14 +230,14 @@ void Fposition::copyFrom( Fposition* pos)
   }
 
   port.copyFrom( pos->getPort());
-  
+
   action.copyFrom( pos->getAction());
 
   waitTime = pos->getWaitTime();
 
   unitWaitTime = pos->getUnitWaitTime();
-  
-  positionActived = true;        
+
+  positionActived = true;
 }
 
 }   // namespace evenja

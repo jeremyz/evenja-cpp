@@ -31,7 +31,7 @@
 
 namespace evenja {
 
-/** First class of evenja and evendoor to be created. 
+/** First class of evenja and evendoor to be created.
   Function : Create the first level of classes Fport (Frouter,...)
              and receive informations from the OS.
 
@@ -50,10 +50,10 @@ protected:
     A Server or deamon software wait auntil a signal ask for the end
     A normal software wil end when nothing is to do (at the end) */
   bool server;
-  
+
   /** End of the server application ? */
   static bool exitApp;
-  
+
 public:
 	
 	/** Constructor. */
@@ -61,10 +61,10 @@ public:
 
 	/** Destructor. */
   ~Fstarter();
-  
+
   /** Open the config file and transmit the first level of the rooms to the FfirstRouter. */
   long start( char *fileNameString);
-  
+
   /** Method called by the "main" of the application.
 			It send an evenData to all evenBoard and then to all evenDoor to really start the work of the rooms.
 				- Start the work of the rooms : sent an evenData to all evenBoard and after to all evenDoor.
@@ -72,7 +72,7 @@ public:
 				- End the work of the rooms : send an evenData to all evenDoor and after to all evenBoard.
 		And wait until a TERM signal arrives from the OS. */
   long execute();
-  
+
   /** Manage if Fstarter saves the config file ( in a dinamyc configuration of rooms).
   Or if it is not needed because it is a static configuration. */
   virtual long end();

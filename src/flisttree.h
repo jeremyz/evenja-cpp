@@ -29,19 +29,19 @@
 #include "flist.h"
 
 namespace evenja {
-  
+
 /** List sorted by an external function.
 
   function : Access as fast as possible the elements of the list (using tree like redblack methods, but on a single list).
- 
+
   description :
   - insertTree : Insert an object in the list directly in the right place in the list
   - searchTree ; Search an object in the tree (if another object with the same value exist).
- 
+
   @author Fabian Padilla.
   I don't use templates with iterators, because many people don't know enough about templates.
   And this code need to be easily read by anyone. Another version will be optimized with new C++ 1x, in 2012 (may be ;).
-   
+
 */
 
 class FlistTree :public Flist

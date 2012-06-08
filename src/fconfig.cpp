@@ -130,7 +130,7 @@ long Fconfig::startNewXml( char* fileNameString)
 
   if( doc)
     return RET_OK;
-  else  
+  else
     return RET_CANNOTCREATE;
 }
 
@@ -170,7 +170,7 @@ void* Fconfig::getCurrent()
 // Methods to move current node pointer to a another nodes
 // -------------------------------------------------------
 
-/** \param[in] fromRoot Reset current position of node cursor. If fromRoot is true, then reset node cursor to root of the XML tree. If fromRoot is false, then current node cursor point the first evenja node. 
+/** \param[in] fromRoot Reset current position of node cursor. If fromRoot is true, then reset node cursor to root of the XML tree. If fromRoot is false, then current node cursor point the first evenja node.
   \return No return value. */
 void Fconfig::resetCurrent( bool fromRoot)
 {
@@ -298,7 +298,7 @@ long Fconfig::gotoChildren()
           gotoParent();
         return ret;
       }
-      else 
+      else
         return RET_OK;
     }
     else
@@ -360,7 +360,7 @@ long Fconfig::Search( char* name /* Name of the tree node to found. */, bool sub
         }
       }
     }
-  }while( !found && !( ret = gotoNext()));  
+  }while( !found && !( ret = gotoNext()));
 
   if( found) // If something found ...
     return RET_OK;
@@ -488,7 +488,7 @@ long Fconfig::addChildren( char* name, char* content)
     return RET_OK;
   }
   else
-    return RET_NONODESELECTED;  
+    return RET_NONODESELECTED;
 }
 
 /** \retval RET_OK No problemo.
@@ -496,7 +496,7 @@ long Fconfig::addChildren( char* name, char* content)
 long Fconfig::removeCurrent()
 {
   char *str;
-  
+
   str = getNodeName();
   if( str != ( char*) RET_NONODESELECTED)
   {
@@ -525,7 +525,7 @@ long Fconfig::removeCurrent()
     return RET_OK;
   }
   else
-    return RET_NONODESELECTED; 
+    return RET_NONODESELECTED;
 }
 
 } // namespace evenja

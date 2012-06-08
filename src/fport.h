@@ -46,7 +46,7 @@ namespace evenja {
   method first , with : Fport::receive_evenData( evenData);
 
   @author Fabian Padilla
-  
+
 */
 
 class Fport : public Fconfig
@@ -58,25 +58,25 @@ protected: // Protected attributes
 
   /** List of all wainting envenData with system datas to be send to a port (internal message queuing */
   static Flist listMsgSys;
-  
+
   /** List of Free and Available evenDatas (faster than new and delete ;) */
   static FlistHash freeEvenData;
 
   /** Router where this port (evenDoor, evenBoard or evenPrg) is connected and from which
   it receive the evenData. */
   Fport* parent;
-  
+
   /** Enable to view the datas inside the port (evenDoor or evenBoard). */
   Fport* viewer;
 
-  
-public: 
+
+public:
 	/** Constructor. */
   Fport();
 	
 	/** Destructor. */
   ~Fport();
-  
+
   /** Set the debug viewer. Where all incoming evenDatas are displayed with the config of the port. */
   long setViewer( Fport* viewer);
 
@@ -115,7 +115,7 @@ public:
   virtual void setFreeEvenData( FevenData* evenData);
 	
   /** USED BY THE EVENDOOR LIBRARY. FUTUR IMPLEMENTATION. */
-  virtual long evendoor_condition( FevenData* evenData, Fport* port);  
+  virtual long evendoor_condition( FevenData* evenData, Fport* port);
 };
 
 } //namespace evenja

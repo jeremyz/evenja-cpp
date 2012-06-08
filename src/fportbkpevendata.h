@@ -32,7 +32,7 @@ namespace evenja {
 
 /** Inherited from Fport to secure the FevenData, when software "forget" to manage them... Better than a "garbage collector".
 
-  function : secure the use of evenData send to evenPrg or evenDoor.  
+  function : secure the use of evenData send to evenPrg or evenDoor.
              if the inherited from evenPrg and evenDoor forget to send the
              evenData then this backup class will save it.
 
@@ -49,7 +49,7 @@ private:
 
 protected: // Protected attributes
 
-public: 
+public:
   /** Constructor. */
 	FportBkpEvenData();
 
@@ -71,7 +71,7 @@ public:
 	
   /** Methods to enable all ports to free an evenData */
   virtual void setFreeEvenData( FevenData* evenData);
-  
+
 };
 
 }	// namespace evenja

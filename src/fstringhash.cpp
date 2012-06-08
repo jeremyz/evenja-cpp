@@ -120,7 +120,7 @@ void FstringHash::hash()
 
 }
 
-/** \param[in] original Original stringHash to copy from, the string and the hash value. 
+/** \param[in] original Original stringHash to copy from, the string and the hash value.
   \return No return value. */
 void FstringHash::copyFrom( FstringHash *original)
 {
@@ -146,7 +146,7 @@ bool FstringHash::equals( FstringHash *original)
 
   return true;
 }
-    
+
 /** \param[in] original Original stringHash to compare with, the hash value.
     \retval 0 both are equals
     \retval 1 this have an higher hash value
@@ -154,7 +154,7 @@ bool FstringHash::equals( FstringHash *original)
 long FstringHash::compare( FstringHash *original)
 {
     unsigned* otherHashValue = original->getHashValue();
-    
+
     if( hashValue[ 0] > otherHashValue[ 0]) return 1;
     if( hashValue[ 0] < otherHashValue[ 0]) return -1;
     if( hashValue[ 1] > otherHashValue[ 1]) return 1;
@@ -163,7 +163,7 @@ long FstringHash::compare( FstringHash *original)
     if( hashValue[ 2] < otherHashValue[ 2]) return -1;
     if( hashValue[ 3] > otherHashValue[ 3]) return 1;
     if( hashValue[ 3] < otherHashValue[ 3]) return -1;
-    
+
     return 0;
 }
 
@@ -207,7 +207,7 @@ void FstringHash::md5( unsigned int* state, unsigned char* str, unsigned int len
   d0 = state[3];
 
   /* To hash the string need to be a modulo of STRING_MODULO */
-  memset( str + length, NULL, ( STRING_MODULO - ( length % STRING_MODULO) + 1)); 
+  memset( str + length, NULL, ( STRING_MODULO - ( length % STRING_MODULO) + 1));
 
   /* Loop through the region to be hashed in chunks of 64 bytes (STRING_MODULO) **/
   buffer_index = 0;

@@ -85,6 +85,6 @@ void FportBkpEvenData::setFreeEvenData( FevenData* evenData)
 	evenDataBkp = 0;
 	
   Fport::setFreeEvenData( evenData);
-}  
+}
 
 }   // namespace evenja

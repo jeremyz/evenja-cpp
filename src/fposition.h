@@ -33,7 +33,7 @@ namespace evenja {
 
 /** Define the position ( source OR destination) of the evenData.
   function : maintain the stringHashs for the computer, rooms, port, action.
-  Format example : www.revena.com/room1/room2/port:normal 
+  Format example : www.revena.com/room1/room2/port:normal
 
   description : method "setPosition" set all position informations this mean
   - computer
@@ -78,7 +78,7 @@ protected:
   /** reset position (erase datas). */
   void resetPosition();
 
-public: 
+public:
 
   /** Constructor. */
   Fposition();

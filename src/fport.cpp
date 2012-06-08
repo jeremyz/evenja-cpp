@@ -46,7 +46,7 @@ Fport::Fport() : Fconfig()
 Fport::~Fport()
 {}
 
-/** \param[in] parentPort Set the parent of this port.  
+/** \param[in] parentPort Set the parent of this port.
   \param[in] fileNameString Filename in XML format to load a XML doc tree.
 	\retval RET_OK No problemo.
 	\retval RET_FILENAME2LONG Path and filename are longer than the MAX_PATH.
@@ -86,7 +86,7 @@ long Fport::setViewer( Fport *port)
 long Fport::justDoIt( FevenData* evenData)
 {
   long ret = RET_OK;
-  
+
   // if a viewer exist then send evenData to it. To make the informations available.
   if( viewer)
     ret = viewer->receive_evenData( evenData);
@@ -94,7 +94,7 @@ long Fport::justDoIt( FevenData* evenData)
   if( ret == RET_OK)
     ret = receive_evenData( evenData); // use the virtual to go to the existing high inherited class instance
 
-  return ret;    
+  return ret;
 }
 
 /** \param[in] evenData FevenData to be just worked in system jobs.
@@ -120,7 +120,7 @@ void Fport::sendEvenData( FevenData* evenData, Fport* portDestination)
   else
      evenData->setActivePort( this);   // ... otherwise it is the starter and ...
 
-  listMsg.add( evenData);  
+  listMsg.add( evenData);
 // -------------------------------------------------------------------------------
 }
 
@@ -149,18 +149,18 @@ void Fport::setFreeEvenData( FevenData* evenData)
 {
   evenData->reset();
   FstringHash* foundIsA = freeEvenData.Search( evenData->isA());
-   
+
   if( foundIsA)  // if found then add the evenData in the specific list (by isA)
   {
     while( evenData->getCountEvenDataB()) // Make available the evenDataB too
-      ( ( FevenData*) foundIsA)->addEvenDataB( evenData->removeEvenDataB());  
+      ( ( FevenData*) foundIsA)->addEvenDataB( evenData->removeEvenDataB());
 
     ( ( FevenData*) foundIsA)->addEvenDataB( evenData);
   }
   else		// If not found then add an evenData with is own list of free evenDatas
   {
-    ( ( FstringHash*) evenData)->copyFrom( evenData->isA());  
-	freeEvenData.add( evenData);  
+    ( ( FstringHash*) evenData)->copyFrom( evenData->isA());
+	freeEvenData.add( evenData);
   }
 }
 
@@ -170,9 +170,9 @@ void Fport::setFreeEvenData( FevenData* evenData)
 FevenData* Fport::getFreeEvenData( FstringHash* isA)
 {
   FevenData* retData = NULL;
-  
+
   FevenData* evenDataRoot = ( FevenData*) freeEvenData.Search( isA);
-  
+
   if( evenDataRoot) // Found the evenData type (isA)
   {
     retData = evenDataRoot->removeEvenDataB();
@@ -182,7 +182,7 @@ FevenData* Fport::getFreeEvenData( FstringHash* isA)
   }
   else
     retData = ( FevenData*) RET_NOTEXIST;
-  
+
   return retData;
 }
 	
