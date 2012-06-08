@@ -15,3 +15,4 @@ rm src/Makefile.in  2>/dev/null
 rm config.h         2>/dev/null
 rm config.h.in      2>/dev/null
 rm configure        2>/dev/null
+exit 0
