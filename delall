@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 
+echo
 echo Delete all files build buy autoconf, automake, configure, make, etc.. processes
 echo -------------------------------------------------------------------------------
 
@@ -7,12 +7,11 @@ echo ---------------------------------------------------------------------------
 ./del4push
 
 # second delete the rest of generated files
-rm Makefile
-rm Makefile.in
-rm aclocal.m4
-rm src/Makefile
-rm src/Makefile.in
-rm config.h
-rm config.h.in
-rm configure
-
+rm Makefile         2>/dev/null
+rm Makefile.in      2>/dev/null
+rm aclocal.m4       2>/dev/null
+rm src/Makefile     2>/dev/null
+rm src/Makefile.in  2>/dev/null
+rm config.h         2>/dev/null
+rm config.h.in      2>/dev/null
+rm configure        2>/dev/null

@@ -1,18 +1,17 @@
 #!/bin/bash
-echo 
+echo
 echo Delete all files not needed in the git push
 echo -------------------------------------------
-rm config.h
-rm config.h.in~
-rm config.log
-rm config.status
-rm stamp-h1
-rm autom4te.cache/*
-rmdir autom4te.cache
-rm src/*.o
-rm src/evenja
-rm -rf deploy/
-rm -rf src/deploy/
-rm Makefile
-rm src/Makefile
-
+rm config.h             2>/dev/null
+rm config.h.in~         2>/dev/null
+rm config.log           2>/dev/null
+rm config.status        2>/dev/null
+rm stamp-h1             2>/dev/null
+rm autom4te.cache/*     2>/dev/null
+rmdir autom4te.cache    2>/dev/null
+rm src/*.o              2>/dev/null
+rm src/evenja           2>/dev/null
+rm -rf deploy/          2>/dev/null
+rm -rf src/deploy/      2>/dev/null
+rm Makefile             2>/dev/null
+rm src/Makefile         2>/dev/null
